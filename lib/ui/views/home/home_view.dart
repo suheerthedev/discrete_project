@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:stacked/stacked.dart';
 import 'package:discrete_project/ui/common/app_colors.dart';
 import 'package:discrete_project/ui/common/ui_helpers.dart';
@@ -22,9 +23,9 @@ class HomeView extends StackedView<HomeViewModel> {
                 verticalSpaceLarge,
                 Column(
                   children: [
-                    const Text(
+                    Text(
                       'Hello, STACKED!',
-                      style: TextStyle(
+                      style: GoogleFonts.montserrat(
                         fontSize: 35,
                         fontWeight: FontWeight.w900,
                       ),
@@ -35,7 +36,7 @@ class HomeView extends StackedView<HomeViewModel> {
                       onPressed: viewModel.incrementCounter,
                       child: Text(
                         viewModel.counterLabel,
-                        style: const TextStyle(color: Colors.white),
+                        style: GoogleFonts.montserrat(color: Colors.white),
                       ),
                     ),
                   ],
@@ -46,17 +47,17 @@ class HomeView extends StackedView<HomeViewModel> {
                     MaterialButton(
                       color: kcDarkGreyColor,
                       onPressed: viewModel.showDialog,
-                      child: const Text(
+                      child: Text(
                         'Show Dialog',
-                        style: TextStyle(color: Colors.white),
+                        style: GoogleFonts.montserrat(color: Colors.white),
                       ),
                     ),
                     MaterialButton(
                       color: kcDarkGreyColor,
                       onPressed: viewModel.showBottomSheet,
-                      child: const Text(
+                      child: Text(
                         'Show Bottom Sheet',
-                        style: TextStyle(color: Colors.white),
+                        style: GoogleFonts.montserrat(color: Colors.white),
                       ),
                     ),
                   ],

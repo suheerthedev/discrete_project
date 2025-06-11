@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:discrete_project/ui/common/app_colors.dart';
 import 'package:discrete_project/ui/common/ui_helpers.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
 
@@ -42,7 +43,7 @@ class InfoAlertDialog extends StackedView<InfoAlertDialogModel> {
                     children: [
                       Text(
                         request.title!,
-                        style: const TextStyle(
+                        style: GoogleFonts.montserrat(
                           fontSize: 16,
                           fontWeight: FontWeight.w900,
                         ),
@@ -50,7 +51,7 @@ class InfoAlertDialog extends StackedView<InfoAlertDialogModel> {
                       verticalSpaceTiny,
                       Text(
                         request.description!,
-                        style: const TextStyle(
+                        style: GoogleFonts.montserrat(
                           fontSize: 14,
                           color: kcMediumGrey,
                         ),
@@ -70,7 +71,8 @@ class InfoAlertDialog extends StackedView<InfoAlertDialogModel> {
                     ),
                   ),
                   alignment: Alignment.center,
-                  child: const Text('⭐️', style: TextStyle(fontSize: 30)),
+                  child:
+                      Text('⭐️', style: GoogleFonts.montserrat(fontSize: 30)),
                 ),
               ],
             ),
@@ -85,9 +87,9 @@ class InfoAlertDialog extends StackedView<InfoAlertDialogModel> {
                   color: Colors.black,
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: const Text(
+                child: Text(
                   'Got it',
-                  style: TextStyle(
+                  style: GoogleFonts.montserrat(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                     fontSize: 16,
