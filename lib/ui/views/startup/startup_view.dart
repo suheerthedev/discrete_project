@@ -21,7 +21,7 @@ class StartupView extends StackedView<StartupViewModel> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              'STACKED',
+              'Discrete Final Project',
               style: GoogleFonts.montserrat(
                   fontSize: 40, fontWeight: FontWeight.w900),
             ),
@@ -31,7 +31,7 @@ class StartupView extends StackedView<StartupViewModel> {
                 Text('Loading ...',
                     style: GoogleFonts.montserrat(fontSize: 16)),
                 horizontalSpaceSmall,
-                SizedBox(
+                const SizedBox(
                   width: 16,
                   height: 16,
                   child: CircularProgressIndicator(
