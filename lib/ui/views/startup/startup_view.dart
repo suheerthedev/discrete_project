@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:stacked/stacked.dart';
-import 'package:discrete_project/ui/common/ui_helpers.dart';
 import 'dart:ui';
 
 import 'startup_viewmodel.dart';
