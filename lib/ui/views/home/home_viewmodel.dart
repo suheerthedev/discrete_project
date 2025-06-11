@@ -33,4 +33,9 @@ class HomeViewModel extends BaseViewModel {
       description: ksHomeBottomSheetDescription,
     );
   }
+
+  void onSelectProblem(int index) {
+    // TODO: Implement navigation or logic for each problem
+    print('Selected problem: $index');
+  }
 }
