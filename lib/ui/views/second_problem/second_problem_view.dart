@@ -91,7 +91,7 @@ class SecondProblemView extends StackedView<SecondProblemViewModel> {
                         elevation: 8,
                       ),
                       onPressed: viewModel.generateKMap,
-                      child: const Text('Generate K-Map (Coming Soon)'),
+                      child: const Text('Generate K-Map'),
                     ),
                   ],
                 ),

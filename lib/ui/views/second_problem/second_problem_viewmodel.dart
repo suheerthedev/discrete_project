@@ -1,6 +1,10 @@
+import 'package:discrete_project/app/app.locator.dart';
+import 'package:discrete_project/app/app.router.dart';
 import 'package:stacked/stacked.dart';
+import 'package:stacked_services/stacked_services.dart';
 
 class SecondProblemViewModel extends BaseViewModel {
+  final _navigationService = locator<NavigationService>();
   // 3 variables: a, b, c. 8 possible combinations.
   final List<bool> _truthTable = List.filled(8, false);
 
@@ -27,8 +31,6 @@ class SecondProblemViewModel extends BaseViewModel {
 
   // Placeholder for K-map generation
   void generateKMap() {
-    // TODO: Implement K-map logic or show a dialog/snackbar
-    // For now, just notifyListeners
-    notifyListeners();
+    _navigationService.navigateToKMapView();
   }
 }
