@@ -87,8 +87,10 @@ class StackedRouter extends _i1.RouterBase {
       );
     },
     _i6.KMapView: (data) {
+      final args = data.getArgs<KMapViewArguments>(nullOk: false);
       return _i7.MaterialPageRoute<dynamic>(
-        builder: (context) => const _i6.KMapView(),
+        builder: (context) =>
+            _i6.KMapView(key: args.key, truthTable: args.truthTable),
         settings: data,
       );
     },
@@ -99,6 +101,33 @@ class StackedRouter extends _i1.RouterBase {
 
   @override
   Map<Type, _i1.StackedRouteFactory> get pagesMap => _pagesMap;
+}
+
+class KMapViewArguments {
+  const KMapViewArguments({
+    this.key,
+    required this.truthTable,
+  });
+
+  final _i7.Key? key;
+
+  final List<bool> truthTable;
+
+  @override
+  String toString() {
+    return '{"key": "$key", "truthTable": "$truthTable"}';
+  }
+
+  @override
+  bool operator ==(covariant KMapViewArguments other) {
+    if (identical(this, other)) return true;
+    return other.key == key && other.truthTable == truthTable;
+  }
+
+  @override
+  int get hashCode {
+    return key.hashCode ^ truthTable.hashCode;
+  }
 }
 
 extension NavigatorStateExtension on _i8.NavigationService {
@@ -158,14 +187,17 @@ extension NavigatorStateExtension on _i8.NavigationService {
         transition: transition);
   }
 
-  Future<dynamic> navigateToKMapView([
+  Future<dynamic> navigateToKMapView({
+    _i7.Key? key,
+    required List<bool> truthTable,
     int? routerId,
     bool preventDuplicates = true,
     Map<String, String>? parameters,
     Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
         transition,
-  ]) async {
+  }) async {
     return navigateTo<dynamic>(Routes.kMapView,
+        arguments: KMapViewArguments(key: key, truthTable: truthTable),
         id: routerId,
         preventDuplicates: preventDuplicates,
         parameters: parameters,
@@ -228,14 +260,17 @@ extension NavigatorStateExtension on _i8.NavigationService {
         transition: transition);
   }
 
-  Future<dynamic> replaceWithKMapView([
+  Future<dynamic> replaceWithKMapView({
+    _i7.Key? key,
+    required List<bool> truthTable,
     int? routerId,
     bool preventDuplicates = true,
     Map<String, String>? parameters,
     Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
         transition,
-  ]) async {
+  }) async {
     return replaceWith<dynamic>(Routes.kMapView,
+        arguments: KMapViewArguments(key: key, truthTable: truthTable),
         id: routerId,
         preventDuplicates: preventDuplicates,
         parameters: parameters,

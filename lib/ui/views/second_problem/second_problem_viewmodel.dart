@@ -31,6 +31,6 @@ class SecondProblemViewModel extends BaseViewModel {
 
   // Placeholder for K-map generation
   void generateKMap() {
-    _navigationService.navigateToKMapView();
+    _navigationService.navigateToKMapView(truthTable: truthTable);
   }
 }
