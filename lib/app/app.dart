@@ -6,6 +6,7 @@ import 'package:stacked/stacked_annotations.dart';
 import 'package:stacked_services/stacked_services.dart';
 import 'package:discrete_project/ui/views/first_problem/first_problem_view.dart';
 import 'package:discrete_project/ui/views/second_problem/second_problem_view.dart';
+import 'package:discrete_project/ui/views/k_map/k_map_view.dart';
 // @stacked-import
 
 @StackedApp(
@@ -14,6 +15,7 @@ import 'package:discrete_project/ui/views/second_problem/second_problem_view.dar
     MaterialRoute(page: StartupView),
     MaterialRoute(page: FirstProblemView),
     MaterialRoute(page: SecondProblemView),
+    MaterialRoute(page: KMapView),
 // @stacked-route
   ],
   dependencies: [
