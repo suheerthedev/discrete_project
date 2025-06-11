@@ -5,6 +5,7 @@ import 'package:discrete_project/ui/views/startup/startup_view.dart';
 import 'package:stacked/stacked_annotations.dart';
 import 'package:stacked_services/stacked_services.dart';
 import 'package:discrete_project/ui/views/first_problem/first_problem_view.dart';
+import 'package:discrete_project/ui/views/second_problem/second_problem_view.dart';
 // @stacked-import
 
 @StackedApp(
@@ -12,6 +13,7 @@ import 'package:discrete_project/ui/views/first_problem/first_problem_view.dart'
     MaterialRoute(page: HomeView),
     MaterialRoute(page: StartupView),
     MaterialRoute(page: FirstProblemView),
+    MaterialRoute(page: SecondProblemView),
 // @stacked-route
   ],
   dependencies: [
