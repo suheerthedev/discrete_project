@@ -72,7 +72,7 @@ class HomeView extends StackedView<HomeViewModel> {
                           subTitle: 'Warshall\'s Algorithm',
                           description:
                               'Visualize and solve real-world network problems using graph algorithms.',
-                          onTap: () => viewModel.onSelectProblem(0),
+                          onTap: viewModel.navigateToFirstProblem,
                           height: cardHeight,
                           width: cardWidth,
                         ),
@@ -82,7 +82,7 @@ class HomeView extends StackedView<HomeViewModel> {
                           subTitle: '(K-Map)',
                           description:
                               'Apply combinatorial logic to practical scenarios and optimize solutions.',
-                          onTap: () => viewModel.onSelectProblem(1),
+                          onTap: viewModel.navigateToSecondProblem,
                           height: cardHeight,
                           width: cardWidth,
                         ),
